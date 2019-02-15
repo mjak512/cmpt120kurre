@@ -1,4 +1,5 @@
 # rover.py
+# Feb 15, 2019
 #Program to calculate the time for a photo to reach Earth from Mars
 
 def main():
