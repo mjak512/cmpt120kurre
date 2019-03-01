@@ -4,10 +4,14 @@
 # Author: Michael Kurre
 # Created: 2019-03-01
 
-def main():
+def inputName():
+    global first, last
     first = input("Enter your first name: ")
     last = input("Enter your last name: ")
+def createUser():
+    global uname
     uname = first + "." + last +"1"
+def createPassword():
     passwd = input("Create a new password: ")
     while True:
         if len(passwd) < 8:
@@ -18,4 +22,8 @@ def main():
            print("Account configured. Your new email address is",
                 uname + "@marist.edu")
            break
+def main():
+    inputName()
+    createUser()
+    createPassword()
 main()
