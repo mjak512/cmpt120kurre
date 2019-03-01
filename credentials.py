@@ -11,8 +11,14 @@ def inputName():
 def createUser():
     global uname
     uname = first + "." + last +"1"
+    uname = uname.lower()
+
 def createPassword():
+    global passwd
     passwd = input("Create a new password: ")
+
+def passwordStrength():
+    global passwd
     while True:
         if len(passwd) < 8:
             print("Fool of a Took! That password is feeble!")
@@ -22,8 +28,10 @@ def createPassword():
            print("Account configured. Your new email address is",
                 uname + "@marist.edu")
            break
+                    
 def main():
     inputName()
     createUser()
     createPassword()
+    passwordStrength()
 main()
