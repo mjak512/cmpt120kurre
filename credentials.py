@@ -8,14 +8,17 @@ def inputName():
     global first, last
     first = input("Enter your first name: ")
     last = input("Enter your last name: ")
+    # return ?
 def createUser():
     global uname
     uname = first + "." + last +"1"
     uname = uname.lower()
+    # return ?
 
 def createPassword():
     global passwd
     passwd = input("Create a new password: ")
+    # return ?
 
 def passwordStrength():
     global passwd
@@ -28,6 +31,8 @@ def passwordStrength():
            print("Account configured. Your new email address is",
                 uname + "@marist.edu")
            break
+
+    # return?
                     
 def main():
     inputName()
