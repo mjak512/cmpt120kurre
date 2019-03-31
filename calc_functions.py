@@ -13,7 +13,7 @@ def calculate(equation):
             i=i+1
     i=0
     while len(equation)>1:
-        if equation[1]=="+" or equation[i]=="-":
+        if equation[i]=="+" or equation[i]=="-":
             process(equation,i)
             i=0
         else:
@@ -35,10 +35,8 @@ def process(equation, i):
         result=float(equation[i-1])+float(equation[i+1])
     elif equation[i]=="-":
         result=float(equation[i-1])-float(equation[i+1])
-    del equation[i-1]
-    del equation[i-1]
-    del equation[i-1]
-    equation.insert(i-1,str[result])
+    del equation[i-1:i+2]
+    equation.insert(i-1,str(result))
 
 def main():
     equation=getEquation()
