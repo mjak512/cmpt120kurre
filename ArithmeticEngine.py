@@ -24,7 +24,11 @@ def doLoop():
         elif cmd == "mult":
             result = num1 * num2
         elif cmd == "div":
-            result = num1 // num2
+            try: 
+                result = num1 / num2
+            except:
+                print("Division by 0")
+                continue
         elif cmd == "quit":
              break
             
