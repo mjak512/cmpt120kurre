@@ -1,5 +1,7 @@
 import random
 
+# JA: You had to call printRow from here
+# You can use loops for this
 def printBoard(board):
     print('   |   |')
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
